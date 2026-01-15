@@ -2,8 +2,10 @@ import express from "express";
 import connectDb from "./DbConfig.js";
 import authRoutes from "./routes/auth.js"
 import router from "./routes/auth.js";
+import dotenv from "dotenv";
 
 const app = express();
+dotenv.config();
 connectDb();
 
 app.use(express.json());
